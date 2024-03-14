@@ -12,7 +12,7 @@ export class ValidateCreateUserPipe implements PipeTransform {
     if(isNaN(parseIntAge)){
       console.log(`${value.age} is not number`);
       throw new HttpException(
-        'inavlid Data Type for propert age. Expected number',HttpStatus.BAD_REQUEST
+        'inavlid Data Type for property age. Expected number',HttpStatus.BAD_REQUEST
       )
     }
     return {...value,parseIntAge};
